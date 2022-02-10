@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
 import Navbar from './components/Navbar/Navbar';
+import NavItem from './components/NavbarItem/NavbarItem';
 
 import { ReactComponent as BellIcon } from './icons/bell.svg';
 import { ReactComponent as MessengerIcon } from './icons/messenger.svg';
@@ -29,21 +30,7 @@ function App() {
     </div>
   );
 }
-function NavItem(props) {
-  const [open, setOpen] = useState(false);
-  return (
-    <li className="nav-item">
-      <a href='#' className="icon-button" onClick={() => setOpen(!open)}>
-        {
-          props.icon
-        }
-      </a>
-      {
-        open && props.children
-      }
-    </li>
-  );
-}
+
 function DropdownMenu() {
   const [activeMenu, setActiveMenu] = useState('main');
   const [menuHeight, setMenuHeight] = useState(null);
