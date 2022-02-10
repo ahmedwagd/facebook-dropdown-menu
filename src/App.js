@@ -1,5 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
+
+import Navbar from './components/Navbar/Navbar';
+
 import { ReactComponent as BellIcon } from './icons/bell.svg';
 import { ReactComponent as MessengerIcon } from './icons/messenger.svg';
 import { ReactComponent as PlusIcon } from './icons/plus.svg';
@@ -24,17 +27,6 @@ function App() {
         </NavItem>
       </Navbar>
     </div>
-  );
-}
-function Navbar(props) {
-  return (
-    <nav className="navbar">
-      <ul className="navbar-nav">
-        {
-          props.children
-        }
-      </ul>
-    </nav>
   );
 }
 function NavItem(props) {
